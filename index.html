@@ -24,12 +24,13 @@
     </hero>
   </header>
   <main>
-    <!-- <aside class="highlights">
-    </aside> -->
-  <div class="sections">
-  <section class="section projects">
-    <ul><span class="section-title">Projects</span>
-      <li><a href="https://github.com/mbp469/memory_game">Memory Game</a>
+    <section class="sections">
+      <section class="projects section">
+        <div class="section-title">Projects</div>
+        <div class="content">content here</div>
+      </section>
+
+      <!-- <li><a href="https://github.com/mbp469/memory_game">Memory Game</a>
         <p>This project was a collaborative project utilizing a Rails backend</p>
       </li>
       <li><a href="https://github.com/mbp469/Hatchery-App">Hatchery-App</a>
@@ -43,27 +44,34 @@
     </li>
       <li><a href="https://github.com/mbp469/AngularToDos">Angular ToDo List</a>
       <p>This project was created to enhance AngularJS skills.</p>
-    </li>
-    </ul>
-  </section>
-  <section class="section education">
-    <ul><span class="section-title">Education</span>
-      <li>Iron Yard</li>
-      <li>Salem International University</li>
-    </ul>
-  </section>
-  <section class="section experience">
-    <ul><span class="section-title">Experience</span>
-      <li>Coding</li>
-      <li>Non-Profit</li>
-      <li>Research</li>
-    </ul>
-  </section>
-</div>
+    </li> -->
+
+    <section class="education section">
+      <div class="section-title">Education</div>
+      <div class="content"></div>
+    </section>
+
+    <section class="experience section">
+      <div class="section-title">Experience</div>
+      <div class="content"></div>
+    </section>
+</section>
 </main>
 <footer>FOOTER</footer>
+<script src="scripts/handlebars-v4.0.5.js"></script>
 <script src="scripts/jquery-3.1.1.min.js"></script>
 <script src="scripts/main.js"></script>
+<!-- TEMPLATES --------------------------------- -->
+<script id="projects-template" type="text/x-handlebars-template">
+<div class="entry">
+<a href="{{address}}">{{title}}</a>
+<p class="description">
+  {{body}}
+</p>
+</div>
+</script>
+<!-- TEMPLATES --------------------------------- -->
+
 
 </body>
 
