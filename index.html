@@ -25,36 +25,20 @@
   </header>
   <main>
     <section class="sections">
-      <section class="projects section">
+      <section class="projects section zoomIn animated">
         <div class="section-title">Projects</div>
-        <div class="content">content here</div>
+        <div class="content"></div>
       </section>
 
-      <!-- <li><a href="https://github.com/mbp469/memory_game">Memory Game</a>
-        <p>This project was a collaborative project utilizing a Rails backend</p>
-      </li>
-      <li><a href="https://github.com/mbp469/Hatchery-App">Hatchery-App</a>
-        <p>This project was a collaborative project utilizing a Rails backend</p>
-      </li>
-      <li><a href="https://github.com/mbp469/movie_lens">Movie Lens</a>
-        <p>This project was a collaborative project utilizing a Rails backend</p>
-      </li>
-      <li><a href="https://github.com/mbp469/Shopular">Shopular Project</a>
-      <p>This project was created to learn AngularJS skills.</p>
-    </li>
-      <li><a href="https://github.com/mbp469/AngularToDos">Angular ToDo List</a>
-      <p>This project was created to enhance AngularJS skills.</p>
-    </li> -->
+      <section class="education section zoomIn animated">
+        <div class="section-title">Education</div>
+        <div class="content"></div>
+      </section>
 
-    <section class="education section">
-      <div class="section-title">Education</div>
-      <div class="content"></div>
-    </section>
-
-    <section class="experience section">
-      <div class="section-title">Experience</div>
-      <div class="content"></div>
-    </section>
+      <section class="experience section zoomIn animated">
+        <div class="section-title">Experience</div>
+        <div class="content"></div>
+      </section>
 </section>
 </main>
 <footer>FOOTER</footer>
@@ -63,13 +47,37 @@
 <script src="scripts/main.js"></script>
 <!-- TEMPLATES --------------------------------- -->
 <script id="projects-template" type="text/x-handlebars-template">
+{{#each projects}}
 <div class="entry">
-<a href="{{address}}">{{title}}</a>
+<a href="{{this.address}}">{{this.title}}</a>
 <p class="description">
-  {{body}}
+  {{this.body}}
 </p>
 </div>
+{{/each}}
 </script>
+
+<script id="education-template" type="text/x-handlebars-template">
+{{#each schools}}
+<div class="entry">
+<p>{{this.title}}</p>
+<p>{{this.degree}}</p>
+<p class="date">{{this.date}}</p>
+</div>
+{{/each}}
+</script>
+</script>
+
+<script id="experience-template" type="text/x-handlebars-template">
+{{#each jobs}}
+<div class="entry">
+<p>{{this.title}}</p>
+<p><a href="{{this.address}}">{{this.organization}}</a></p>
+<p class="date">{{this.date}}</p>
+</div>
+{{/each}}
+</script>
+
 <!-- TEMPLATES --------------------------------- -->
 
 

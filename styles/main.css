@@ -67,7 +67,8 @@ main {
     width: 32.25%;
     height: 32.25%;
     box-shadow: 0px 1px 2px #673c04;
-    cursor: pointer; }
+    cursor: pointer;
+    transition: all 0.8s ease-in-out; }
     .sections .section:hover {
       background: linear-gradient(-180deg, white 19%, beige 54%, #673c04 100%); }
 
