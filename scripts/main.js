@@ -29,7 +29,8 @@ $( document ).ready(function() {
   };
 
     $('.section').on('click',function(event){
-      var target = $(event.target);
+      var target = $(this);
+      console.log(target);
       $(target).toggleClass('open');
       if($(target).hasClass('open')){
         $('.section').hide();
